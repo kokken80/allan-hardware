@@ -1,0 +1,160 @@
+/* Réinitialisation basique */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #f8f8f8;
+  background-color: #252525;
+}
+
+/* En-tête */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #414040;
+}
+
+header .logo img {
+  height: 80px;
+  width: auto;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+header nav ul li a:hover {
+  background-color: #ff5722;
+}
+
+/* Section d'accueil */
+.hero {
+  background-image: url('img/monPcRGB.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+}
+
+/* Section Exemples */
+#exemples {
+  padding: 50px;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.exemples-gallery {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.exemples-gallery img {
+  width: 100%;
+  max-width: 400px; /* Taille maximale des images */
+  height: auto; /* Conserve les proportions */
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.exemples-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .exemples-gallery img {
+    max-width: 300px; /* Taille réduite pour tablettes */
+  }
+}
+
+@media (max-width: 480px) {
+  .exemples-gallery img {
+    max-width: 100%; /* Taille ajustée à l'écran des téléphones */
+  }
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+/* Media Queries */
+@media (max-width: 480px) {
+  /* En-tête */
+  header {
+    flex-direction: column; /* Aligne les éléments en colonne */
+    text-align: center;
+  }
+
+  header .logo img {
+    height: 60px; /* Réduction de la taille du logo */
+  }
+
+  header nav ul {
+    flex-direction: column; /* Empile les liens en colonne */
+    gap: 10px;
+  }
+
+  header nav ul li a {
+    padding: 8px 10px; /* Réduction des marges */
+    font-size: 14px; /* Réduction de la taille de police */
+  }
+
+  /* Section d'accueil */
+  .hero {
+    height: 50vh; /* Réduction de la hauteur */
+    padding: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem; /* Réduction de la taille de police */
+  }
+
+  /* Section Exemples */
+  #exemples {
+    padding: 20px; /* Réduction des marges */
+  }
+
+  .exemples-gallery img {
+    max-width: 100%; /* Les images occupent toute la largeur de l'écran */
+    margin-bottom: 10px; /* Ajout d'espace entre les images */
+  }
+
+  /* Footer */
+  footer {
+    font-size: 12px; /* Réduction de la taille de police */
+    padding: 10px; /* Réduction des marges */
+  }
+}
