@@ -1,0 +1,231 @@
+/* Réinitialisation */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 20px;
+}
+
+li {
+  font-size: 20px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #f8f8f8;
+  background-color: #252525;
+}
+
+/* En-tête */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #414040;
+}
+
+header .logo img {
+  height: 60px;
+}
+
+/* Menu principal */
+header nav ul {
+  display: flex;
+  gap: 20px;
+  list-style-type: none;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+
+header nav ul li a:hover {
+  background-color: #ff5722;
+}
+
+/* Menu hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Section d'accueil */
+.hero {
+  background-image: url('img/monPcRGB.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+/* Sections */
+section {
+  padding: 30px;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+/* Tarifs */
+.tarifs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.tarif-item {
+  background-color: #3a3a3a;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.tarif-item:hover {
+  transform: scale(1.05);
+}
+
+.tarif-item h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.tarif-item .prix {
+  font-size: 1.4rem;
+  margin: 10px 0;
+  color: #ff5722;
+}
+
+/* Options */
+.options-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.option-item {
+  background-color: #3a3a3a;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.option-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.option-item .prix {
+  font-size: 1.5rem;
+  margin: 10px 0;
+  color: #ff5722;
+}
+
+/* Galerie */
+.exemples-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.exemples-gallery img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.exemples-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+/* Médias Queries */
+@media (max-width: 1024px) {
+  /* Par défaut, cache le menu */
+  header nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background-color: #414040;
+    padding: 20px;
+  }
+
+  /* Affiche le hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Menu déroulant affiché quand le menu est actif */
+  header nav.active ul {
+    display: flex;
+  }
+
+  /* Adaptation des liens du menu */
+  header nav ul li a {
+    padding: 10px 0;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Optimisation pour les écrans plus petits */
+  header nav ul li a {
+    padding: 12px 0;
+    font-size: 1.1rem;
+  }
+
+  /* Le hamburger doit être toujours visible */
+  .hamburger {
+    display: flex;
+  }
+
+  .hero h1 {
+    font-size: 20px; /* Réduit la taille de la police sur les téléphones */
+  }
+
+  .hero p {
+    font-size: 20px;  /* Vous pouvez également ajuster la taille du texte du paragraphe si nécessaire */
+  }
+}
